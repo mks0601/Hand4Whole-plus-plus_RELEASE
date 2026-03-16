@@ -1,6 +1,6 @@
 # Hand4Whole++ (CVPR 2026)
 
-## [Project Page](https://mks0601.github.io/Hand4Whole-plus-plus/) | [Paper]() | [Video]() 
+## [Project Page](https://mks0601.github.io/Hand4Whole-plus-plus/) | [Paper]() | [Video](https://youtu.be/iUM7O0r59S0?si=ouj67aoMGNSRYAWM) 
 
 * Hand4Whole++ is a powerful framework designed to significantly boost hand accuracy in 3D whole-body pose estimation by seamlessly integrating high-quality hand details into full-body models.
 
