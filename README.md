@@ -23,6 +23,17 @@ conda activate h4wpp
 * Move to `common/nets` and clone [[WiLoR](https://github.com/rolpotamias/WiLoR)] and download its pretrained weights following the instruction.
 * Move to `common/nets` and download [[mmpose](https://drive.google.com/file/d/1Rxjb9l5m49lhoxfW0ohubl19vVRx9Q_n/view?usp=sharing)]. Place [[DWPose](https://drive.google.com/file/d/1PHKN3p873dgCSh_YRsYqTZVj-kIbclRS/view?usp=sharing)] at `common/nets/mmpose/dw-ll_ucoco.pth`.
 
+* External WiLoR patch
+
+    Hand4Whole++ was tested with WiLoR commit `50847f9`.
+
+    After cloning WiLoR, please apply the provided patch before running the code:
+
+    ```bash
+    cd common/nets/WiLoR
+    git checkout 50847f9
+    cd ../../..
+    bash patches/apply_wilor_patch.sh
 
 ## Demo
 * Download the pre-trained Hand4Whole++ from [here](https://drive.google.com/drive/folders/1sDWjihPLcjJNTzQbGUedJ3zaK0AyalBt?usp=sharing).

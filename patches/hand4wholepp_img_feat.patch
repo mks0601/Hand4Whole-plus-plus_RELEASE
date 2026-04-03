@@ -1,0 +1,21 @@
+diff --git a/wilor/models/wilor.py b/wilor/models/wilor.py
+index d1415d4..79cc2dc 100644
+--- a/wilor/models/wilor.py
++++ b/wilor/models/wilor.py
+@@ -109,7 +109,6 @@ class WiLoR(pl.LightningModule):
+         # Compute conditioning features using the backbone
+         # if using ViT backbone, we need to use a different aspect ratio
+         temp_mano_params, pred_cam, pred_mano_feats, vit_out = self.backbone(x[:,:,:,32:-32]) # B, 1280, 16, 12  
+-
+     
+         # Compute camera translation
+         device = temp_mano_params['hand_pose'].device
+@@ -156,6 +155,8 @@ class WiLoR(pl.LightningModule):
+                                                    translation=pred_cam_t,
+                                                    focal_length=focal_length / self.cfg.MODEL.IMAGE_SIZE)
+         output['pred_keypoints_2d'] = pred_keypoints_2d.reshape(batch_size, -1, 2)
++
++        output['img_feat'] = vit_out
+         
+         return output
+ 
